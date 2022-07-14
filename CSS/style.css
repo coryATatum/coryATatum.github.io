@@ -1,0 +1,949 @@
+:root {
+    --color-white: #141414;
+    --color-light: #f4f4f4;
+    --color-dark: #b0b3b8;
+    --color-black: #141415;
+    --color-primary: #e1c775;
+    --color-primary-light: hsl(14, 89%, 53%, 12%);
+    --color-success: #29f5a6;
+    --color-warning: #ffce31;
+
+    --transition: all 300ms ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    border: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    background: var(--color-primary-light);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color-primary);
+}
+
+
+
+
+html {
+    font-size: 15px;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--color-white);
+    font-family: 'Playfair display', sans-serif;
+    color: var(--color-dark);
+    max-width: 100vw;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    color: var(--color-dark);
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 3.8rem;
+}
+
+h2 {
+    font-size: 2.6rem;
+}
+
+h3 {
+    font-size: 1.6rem;
+}
+
+h4 {
+    font-size: 1.2rem;
+}
+
+h5 {
+    font-size: 0.86rem;
+}
+
+p {
+    line-height: 1.8;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+section {
+
+    padding: 6rem 0 8rem;
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
+section h1 {
+
+    display: block;
+    margin-bottom: 5rem;
+}
+
+
+section h4 {
+    color: #e1c775;
+    letter-spacing: 0.3rem;
+}
+
+img {
+    width: 100%;
+}
+
+.btn {
+    padding: 1.4rem 3.4rem;
+    font-size: 1.1rem;
+    color: var(--color-black);
+    background-color: var(--color-white);
+    display: inline-block;
+    margin: 2rem 0;
+    transition: var(--transition);
+}
+
+.btn:hover {
+    box-shadow: 0 2rem 2rem var(--color-primary-light);
+    color: (var(--color-black));
+}
+
+.btn-primary {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+
+nav {
+    width: 100%;
+    height: 5rem;
+    background: var(--color-white);
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    border-bottom: 1px solid var(--color-light);
+}
+
+nav.show-box-shadow {
+    box-shadow: 0 0.6rem 1rem var(--color-primary-light);
+}
+
+nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+nav button {
+    display: none;
+}
+
+nav h3 {
+    color: var(--color-primary);
+}
+
+nav .container ul {
+    display: flex;
+    height: 100%;
+}
+
+nav .container ul li a {
+    height: 100%;
+    width: 7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-dark);
+    position: relative;
+    transition: var(--transition);
+}
+
+nav .container ul li a:hover {
+    color: var(--color-primary);
+}
+
+nav .container ul li a.active {
+    background: var(--color-primary);
+    color: var(--color-white);
+}
+
+/* ******************************LANDING SECTION********************************* */
+
+section.landing {
+    display: grid;
+    place-items: center;
+    position: relative;
+    top: 5rem;
+    padding-bottom: 14rem;
+    background: var(--color-white);
+
+
+}
+
+.auto-typed {
+    color: var(--color-primary);
+}
+
+
+
+section.landing .container {
+    display: grid;
+    grid-template-columns: 5rem auto 26rem;
+    gap: 2rem;
+}
+
+section.landing .socials {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    margin-top: 5rem;
+}
+
+section.landing .socials a {
+    font-size: 1.1rem;
+    background: var(--color-light);
+    color: var(--color-black);
+    padding: 0.3rem;
+    border-radius: 50%;
+    height: 2rem;
+    width: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: var(--transition);
+}
+
+section.landing .socials a:hover {
+    background: var(--color-primary);
+    color: var(--color-white);
+}
+
+section.landing .info {
+    text-align: left;
+    margin: 0;
+}
+
+section.landing h3 {
+    margin: 2.4rem 0 1rem;
+}
+
+section.landing .info p {
+    width: 35rem;
+}
+
+section.landing .profile-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.info a {
+    align-items: center;
+}
+
+.contactBtn:hover {
+    color: var(--color-white);
+}
+
+
+
+
+/* **************************ABOUT ME SECTION******************* */
+
+section.about {
+    background: var(--color-black);
+    color: var(--color-dark);
+}
+
+section.about h1 {
+    color: var(--color-dark);
+    text-align: center;
+    font-size: 5rem;
+    margin-bottom: 100px;
+}
+
+section.about #aboutTitle {
+    display: none;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+section.about .container {
+    display: grid;
+    grid-template-columns: 26rem auto;
+    gap: 5rem;
+    background: #232B2B;
+
+    border-radius: 45px/15px;
+    width: 90%;
+    padding: 15px;
+
+
+}
+
+section.about .container img {
+    border-radius: 45px/15px;
+
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+
+}
+
+section.about .container .info {
+    padding: 20px;
+}
+
+section.about p {
+    margin-bottom: 1rem;
+}
+
+section.about .container .read-more-content {
+    display: none;
+}
+
+section.about .container .read-more-content.show-content {
+    display: block;
+}
+
+section.about .container .read-more {
+    display: block;
+    margin: 1rem 0 2rem;
+    color: var(--color-primary);
+    cursor: pointer;
+}
+
+section.about .container .read-more:hover {
+    text-decoration: underline;
+}
+
+#download:hover {
+    color: var(--color-black);
+}
+
+/* **********************SKILLS SECTION***************** */
+
+
+section.skills {
+    background: var(--color-black);
+}
+
+.skills h1 {
+    color: var(--color-dark);
+    text-align: right;
+    margin-bottom: 100px;
+    margin-right: 150px;
+}
+
+.skills h4 {
+    text-align: right;
+    font-size: 25px;
+    letter-spacing: 00.3rem;
+    margin-right: 150px;
+    margin-bottom: 20px;
+}
+
+section.skills .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+section.skills .container .skill {
+    background: var(--color-dark);
+    color: var(--color-black);
+    padding: 3rem 2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    cursor: default;
+    border-radius: 15px;
+    transition: var(--transition);
+
+}
+
+.skill h3 {
+    color: var(--color-black);
+    margin-bottom: 8px;
+}
+
+section.skills .container .skill:hover {
+    box-shadow: 0 3rem 3rem var(--color-primary-light);
+}
+
+section.skills .container .skill span {
+    background: var(--color-primary);
+    width: 4rem;
+    height: 4rem;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: var(--color-white);
+}
+
+section.skills .container .skill:nth-child(2) span {
+    background: var(--color-warning);
+}
+
+section.skills .container .skill:nth-child(3) span {
+    background: var(--color-success);
+}
+
+
+
+.listSkillContainer {
+
+    width: 80%;
+    height: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.skill .skillIcons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 20%;
+}
+
+.skill .designSkill {
+    margin-top: 13px;
+    width: 60%;
+}
+
+.designSkill li {
+    line-height: 25px;
+    font-size: 30px;
+}
+
+.skillIcons ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+}
+
+.skill ul li {
+    margin-bottom: 30px;
+    font-weight: 400;
+    font-size: 17px;
+}
+
+.webSkill {
+    height: 250px;
+
+}
+
+.webSkill li {
+
+    height: 35px;
+
+}
+
+
+
+.webIcons {
+    height: 250px;
+
+}
+
+.webIcons li {
+    line-height: 20px;
+}
+
+.serverSkill {
+    height: 230px;
+}
+
+.serverSkill li {
+    line-height: 28px;
+    height: 35px;
+    padding: 5px;
+}
+
+.serverIcons {
+
+    height: 250px;
+}
+
+.serverIcons li {
+    line-height: 18px;
+}
+
+
+
+/************************** Portfolio ***************************/
+
+section.recent-work {
+    background: var(--color-white);
+}
+
+#projectSectionTitle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#words {
+    display: block;
+}
+
+section.recent-work h1 {
+    margin-left: 100px;
+}
+
+section.recent-work h4 {
+    margin-left: 100px;
+
+}
+
+section.recent-work .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+section.recent-work .container .project {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    cursor: default;
+    transition: var(--transition);
+}
+
+.workDesc {
+    width: 75%;
+    margin-left: 60px;
+}
+
+section.recent-work .container .project p {
+    color: var(--color-light);
+}
+
+section.recent-work .container .project h2 {
+    color: var(--color-dark);
+}
+
+
+section.recent-work .container .project .action {
+    text-decoration: underline;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: .6rem;
+
+}
+
+.thumbnail {
+    display: flex;
+    flex-direction: row;
+}
+
+.thumbnail h2 {
+    margin-left: 15px;
+}
+
+.action {
+    margin-left: 50px;
+}
+
+.action a {
+    margin: 15px;
+    color: var(--color-dark);
+}
+
+#gameIcon {
+    margin-left: 50px;
+}
+
+
+
+/************************************* Contact **********************/
+
+
+section.contact {
+    background: url("../images/kari-shea-1SAnrIxw5OY-unsplash.jpg") no-repeat center center/cover;
+    padding: 0;
+    max-width: 100vw;
+}
+
+
+
+
+
+section.contact .overlay {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10rem 0 7rem;
+}
+
+section.contact .container {
+    width: 40%;
+}
+
+section.contact .container h4 {
+    text-align: center;
+    font-size: 30px;
+}
+
+section.contact .container h1 {
+    margin: 0;
+    text-align: center;
+    color: var(--color-dark);
+}
+
+section.contact .container p {
+    text-align: center;
+    color: var(--color-dark);
+    opacity: 0.8;
+    margin: 0.5rem;
+}
+
+section.contact form {
+    margin-top: 3rem;
+    margin-right: 25px;
+}
+
+section.contact form textarea {
+    height: 10rem;
+}
+
+section.contact form input,
+section.contact form textarea {
+    display: block;
+    width: 100%;
+    margin: 0.5rem;
+    padding: 1.6rem;
+    border: 1px solid var(--color-dark);
+    background: transparent;
+    color: var(--color-dark);
+    transition: var(--transition);
+
+}
+
+section.contact form input:focus,
+section.contact form textarea:focus {
+    background: var(--color-dark);
+    color: var(--color-white);
+}
+
+section.contact form input::placeholder,
+section.contact form textarea::placeholder {
+    color: var(--color-dark);
+
+}
+
+section.contact form .btn {
+    width: 14rem;
+    border: none;
+    background: var(--color-dark);
+    color: var(--color-white);
+    margin: 2rem auto 0;
+
+}
+
+section.contact form .btn:hover {
+    background: var(--color-primary);
+    cursor: pointer;
+    color: var(--color-black);
+}
+
+footer {
+    padding: 5rem;
+
+}
+
+footer .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+footer .container ul {
+    display: flex;
+    gap: 3rem;
+}
+
+footer .container ul a {
+    color: var(--color-dark);
+    transition: var(--transition);
+}
+
+footer .container ul a:hover {
+    color: var(--color-primary);
+}
+
+footer .container .socials {
+    display: flex;
+    gap: 2rem;
+}
+
+footer .container .socials a {
+    background: var(--color-light);
+    color: var(--color-white);
+    padding: 0.3rem;
+    border-radius: 50%;
+    transition: var(--transition);
+}
+
+footer .container .socials a:hover {
+    background: var(--color-primary);
+    color: var(--color-white);
+}
+
+footer .copyright {
+    background: var(--color-primary);
+    color: var(--color-white);
+    text-align: center;
+    margin-top: 5rem;
+    padding: 2rem 0;
+    font-size: 0.8rem;
+}
+
+/************************Media Queries********************************/
+
+@media screen and (max-width: 600px) {
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
+
+    h4 {
+        font-size: 30px;
+    }
+
+    h5 {
+        font-size: 0.68rem;
+    }
+
+    .container {
+        width: 94%;
+    }
+
+
+
+    nav h3 {
+        margin-left: 1rem;
+    }
+
+
+
+    nav .container {
+        width: 100%;
+    }
+
+    nav .container ul {
+        position: fixed;
+        top: 0;
+        flex-direction: column;
+        z-index: 3;
+        width: 16rem;
+        height: 100vh;
+        background: var(--color-white);
+        box-shadow: 1rem 0 2rem var(--color-primary-light);
+        display: none;
+    }
+
+    nav ul li {
+        height: 4.6rem;
+    }
+
+    nav .container ul li a {
+        width: 100%;
+        justify-content: start;
+        padding-left: 2rem;
+    }
+
+    nav .container ul li a:hover {
+        padding-left: 3rem;
+    }
+
+    nav button {
+        display: inline-block;
+        cursor: pointer;
+        background: transparent;
+        color: var(--color-dark);
+        margin-right: 1rem;
+    }
+
+    nav button#close-btn {
+        display: none;
+    }
+
+    #helloWorld {
+        font-size: 1rem;
+    }
+
+    section.landing {
+        margin-top: -1rem;
+        padding-bottom: 7rem;
+        max-width: 100vw;
+        overflow: hidden;
+    }
+
+    section.landing .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 20% 50%;
+        text-align: center;
+        row-gap: 6rem;
+    }
+
+    section.landing .container .socials {
+        display: none;
+
+    }
+
+    section.landing .container .info {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    section.landing .container .info h1 {
+        text-align: center;
+    }
+
+    section.landing .container .info p {
+        margin: 0 auto;
+        width: 92%;
+    }
+
+    section.landing .container .profile-area {
+        grid-row: 1;
+        width: 94%;
+        margin: 0 auto;
+    }
+
+    #recentworkHeader {
+        text-align: left;
+        font-size: 1rem;
+        margin-left: 20px;
+        margin-bottom: 30px;
+        padding: 0;
+    }
+
+    .thumbnail {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 50px;
+    }
+
+    .workDesc {
+        margin: 0;
+        padding: 0;
+    }
+
+    .action {
+        margin: 0;
+    }
+
+    #gameIcon {
+        margin-left: 20px;
+    }
+
+    .contactBtn {
+        margin-left: 75px;
+    }
+
+    #words {
+        display: none;
+    }
+
+    section.about .container {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    section.about #aboutTitle {
+        display: block;
+        font-size: 1rem;
+        text-align: right;
+        margin-right: 20px;
+    }
+
+    section.about #aboutTitle2 {
+        display: none;
+    }
+
+
+    section.skills .container {
+        grid-template-columns: 1fr;
+    }
+
+    section.skills #skillsTitle {
+        margin: 0;
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    #skillsTitleDesc {
+        display: none;
+    }
+
+
+    section.recent-work .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    #projectSectionTitle {
+
+        margin-bottom: 55px;
+
+    }
+
+    section.contact .container {
+        width: 90vw;
+    }
+
+    section.contact .container p {
+        width: 80vw;
+        margin: 0.5rem auto 0;
+    }
+
+    footer .container {
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    footer .container ul {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.4rem;
+    }
+
+}
