@@ -844,6 +844,10 @@ footer .copyright {
         margin: 0 auto;
     }
 
+    #contactBtn {
+        margin-left: 160px;
+    }
+
     #recentworkHeader {
         text-align: left;
         font-size: 1rem;
