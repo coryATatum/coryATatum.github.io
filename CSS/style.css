@@ -844,8 +844,12 @@ footer .copyright {
         margin: 0 auto;
     }
 
-    #contactBtn {
-        margin-left: 160px;
+    .talkBtn {
+        width: 90%;
+        margin-left: 14px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     #recentworkHeader {
@@ -874,10 +878,6 @@ footer .copyright {
 
     #gameIcon {
         margin-left: 20px;
-    }
-
-    .contactBtn {
-        margin-left: 75px;
     }
 
     #words {
