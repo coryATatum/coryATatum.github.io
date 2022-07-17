@@ -846,10 +846,11 @@ footer .copyright {
 
     .talkBtn {
         width: 90%;
-        margin-left: 14px;
+        margin-left: 16px;
         display: flex;
         justify-content: center;
         align-items: center;
+        border: 1px solid white;
     }
 
     #recentworkHeader {
