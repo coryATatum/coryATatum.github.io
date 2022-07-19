@@ -43,38 +43,76 @@ readMoreBtn.addEventListener('click', () => {
     }
 })
 
-const skillItem = document.querySelectorAll('section.skills .skill');
-
-skillItem.forEach(skill => {
-    skill.querySelector('.head').addEventListener('click', () => {
-        skill.querySelector('.items').classList.toggle('show-items');
-    })
-})
-
 window.addEventListener('scroll', () => {
     document.querySelector('nav').classList.toggle('show-box-shadow', window.scrollY > 0)
 }
 );
 
 const openBtn = document.querySelector('.contactBtn');
-const modalClose = document.querySelector('#close');
+const modalClose = document.querySelector('.close');
+const mediaClose = document.querySelector('.mediaClose');
 const modal = document.querySelector('.modal');
+const hello = document.getElementById('helloWorld');
+const landing = document.querySelector('.landing');
+const site = document.querySelector('body');
+const mediaModal = document.querySelector('.mediaModal');
+const mq = window.matchMedia("(max-width: 600px)");
 
 openBtn.addEventListener('click', openModal);
 
 function openModal() {
-    modal.style.display = 'block'
+    if (mq.matches) {
+        mqModal();
+
+    } else {
+        modal.style.display = 'block'
+        hello.style.display = 'none'
+        site.style.overflow = 'hidden'
+        landing.style.position = 'unset'
+    }
 };
+
+function mqModal() {
+    mediaModal.style.display = 'block'
+    modal.style.display = 'none'
+    landing.style.position = 'unset'
+    hello.style.display = 'none'
+    site.style.overflow = 'hidden'
+}
+
 
 modalClose.addEventListener('click', closeModal);
 
 function closeModal() {
     modal.style.display = 'none'
+    hello.style.display = 'block'
+    site.style.overflow = 'scroll'
+    landing.style.position = 'relative'
 };
+
+mediaClose.addEventListener('click', closeMqModal)
+
+function closeMqModal() {
+    mediaModal.style.display = 'none'
+    hello.style.display = 'block'
+    site.style.overflow = 'scroll'
+    landing.style.position = 'relative'
+}
 
 modal.addEventListener('click', function (e) {
     if (e.target.classList.contains('modal')) {
         closeModal();
     }
 });
+
+mediaModal.addEventListener('click', function (e) {
+    if (e.target.classList.contains('mediaModal')) {
+        closeModal();
+    }
+});
+
+
+
+
+
 
