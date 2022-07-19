@@ -107,7 +107,7 @@ modal.addEventListener('click', function (e) {
 
 mediaModal.addEventListener('click', function (e) {
     if (e.target.classList.contains('mediaModal')) {
-        closeModal();
+        closeMqModal();
     }
 });
 
